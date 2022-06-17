@@ -2,60 +2,138 @@
 %! Date = 17/06/2022
 
 % Preamble
-\documentclass[11pt, a5paper, landscape]{article}
+\documentclass[12pt]{book}
 
 % Packages
 \usepackage[chorded]{songs}
 \usepackage[utf8]{inputenc}
+\usepackage[sfdefault]{roboto}
 \usepackage[T1]{fontenc}
-\usapackage[]
+\usepackage[pdftex]{graphicx}
+\usepackage[
+        a5paper,
+        landscape,
+        left=1cm,
+        right=1cm,
+        top=1cm,
+        bottom=1cm,
+        footskip=5mm,
+        headheight=0
+    ]{geometry}
+\usepackage{color}
+
+% \usepackage{layout}
+
 
 
 % Številka pesmi
 \setlength{\songnumwidth}{1cm}
 \renewcommand{\thesongnum}{\arabic{songnum}}
-\renewcommand{\printsongnum}[1]{\it\LARGE#1}
+\renewcommand{\printsongnum}[1]{\LARGE#1}
 
 % Naslov pesmi
 \renewcommand{\stitlefont}{
-    \rmfont\Large\baselineskip=20pt\lineskiplimit=0pt
+    \rmfont\bf\Large\baselineskip=20pt\lineskiplimit=0pt
 }
 
+\setlength{\fboxsep}{3pt}
+
+
 % Besedilo pesmi
+\setlength{\cbarwidth}{0pt}
 \renewcommand{\lyricfont}{\sffamily\small}
 \renewcommand{\notebgcolor}{white}
 \noversenumbers
-\songcolumns{3}
+\songcolumns{2}
+\columnsep=8mm
+\versesep=12pt plus 2pt minus 2pt
 
-
+\renewcommand{\clineparams}{ % višina akordov
+    \baselineskip=10pt
+    \lineskiplimit=1pt
+    \lineskip=1pt
+}
 
 % Akordi
 \renewcommand{\chorusfont}{\it}
 \renewcommand{\printchord}[1]{\rmfamily\bf#1}
+\nosongnumbers
+\MultiwordChords
 
+% konc in začetek pesmi
+\setlength{\sbarheight}{0pt}
+\renewcommand\makeprelude{%
+    \resettitles
+    {\bfseries\thesongnum. \songtitle\par
+    \nexttitle\foreachtitle{(\songtitle)\par}}%
+
+    \colorbox{green}{
+        \footnotesize\extendprelude
+    }
+
+}
+
+\renewcommand\makepostlude{%
+nodline
+}
 
 
 % Document
 \begin{document}
 
+
+
+    % \layout
+
     \begin{songs}{}
+
+
         \beginsong{Tam ob ognju našem}[by={Taborniška}]
 
-        \beginverse
-        \[A]Tam ob ognju našem si sežemo v \[E]roke\[E7],
-        Plamen neugašen nam je srce\[A].
-        Vedno te bom ljubil, di\[A7]h gozda, šum vod\[D]a,
-        Tu je moj dom \[A]in vedno bom, tu\[E]kaj rad \[E7]ostal do\[A]ma.
-        \endverse
+
+
+        \beginchorus
+        T\[A]am ob ognju našem si sež\[E]emo v \[E7]roke,
+        Plamen neugašen nam je s\[A]rce.
+        Vedno te bom lju\[A7]bil, dih gozda, \[D]šum voda,
+        Tu je m\[A]oj dom in vedno b\[E]om, tukaj ra\[E7]d osta\[A]l doma.
+        \endchorus
 
         \beginverse
         Kakor lepe sanje spomin bo na te dni,
         Ko se spomnim nanje, srce vzdrhti.
         Saj mladost je naša, kot lepa majska noc,
-        Vsak dan bo lep spomin krasan, vedno lep in vedno vroc.
+        Vsak dan bo lep spomin krasan, vedno lep in vedno vroč.
         \endverse
 
         \endsong
+
+
+        \beginsong{Taborniška himna}[by={Taborniška}]
+
+        \beginverse
+        Dviga p\[C]lamen se iz \[G]ognja,
+        taboriš\[G7]ca naše	\[C]ga,
+        ki pod \[F]goro mirno spa\[C]va,
+        sredi gozda \[G7]temneg\[C]a.
+        \endverse
+
+        \beginverse
+        Tam šotori se blestijo,
+        prapor sredi njih vihra
+        in oznanja vsej prirodi,
+        kje je tabornik doma.
+        \endverse
+
+        \beginverse
+        Poslušajte bratje sestre
+        gozda jelovega spev,
+        pesem velike prirode,
+        tihi gorski njen odmev.
+
+        \endverse
+        \endsong
+
     \end{songs}
 
 
