@@ -32,7 +32,7 @@
 
 % Naslov pesmi
 \renewcommand{\stitlefont}{
-    \rmfont\bf\Large\baselineskip=20pt\lineskiplimit=0pt
+    \rmfont\bf\large\baselineskip=20pt\lineskiplimit=0pt
 }
 
 \setlength{\fboxsep}{3pt}
@@ -63,12 +63,14 @@
 \setlength{\sbarheight}{0pt}
 \renewcommand\makeprelude{%
     \resettitles
-    {\bfseries\thesongnum. \songtitle\par
+    {\bfseries\thesongnum. \MakeUppercase{\songtitle}\par
     \nexttitle\foreachtitle{(\songtitle)\par}}%
 
-     \footnotesize\extendprelude
-
-
+    \colorbox{black}{
+        \begin{minipage}{85mm}
+            \color{white}\footnotesize{\textbf{\extendprelude}}
+        \end{minipage}
+    }
 }
 
 \renewcommand\makepostlude{%
