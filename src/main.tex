@@ -2,14 +2,63 @@
 %! Date = 17/06/2022
 
 % Preamble
-\documentclass[11pt]{article}
+\documentclass[11pt, a5paper, landscape]{article}
 
 % Packages
-\usepackage{amsmath}
+\usepackage[chorded]{songs}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usapackage[]
+
+
+% Številka pesmi
+\setlength{\songnumwidth}{1cm}
+\renewcommand{\thesongnum}{\arabic{songnum}}
+\renewcommand{\printsongnum}[1]{\it\LARGE#1}
+
+% Naslov pesmi
+\renewcommand{\stitlefont}{
+    \rmfont\Large\baselineskip=20pt\lineskiplimit=0pt
+}
+
+% Besedilo pesmi
+\renewcommand{\lyricfont}{\sffamily\small}
+\renewcommand{\notebgcolor}{white}
+\noversenumbers
+\songcolumns{3}
+
+
+
+% Akordi
+\renewcommand{\chorusfont}{\it}
+\renewcommand{\printchord}[1]{\rmfamily\bf#1}
+
+
 
 % Document
 \begin{document}
 
-Hello world!
+    \begin{songs}{}
+        \beginsong{Tam ob ognju našem}[by={Taborniška}]
+
+        \beginverse
+        \[A]Tam ob ognju našem si sežemo v \[E]roke\[E7],
+        Plamen neugašen nam je srce\[A].
+        Vedno te bom ljubil, di\[A7]h gozda, šum vod\[D]a,
+        Tu je moj dom \[A]in vedno bom, tu\[E]kaj rad \[E7]ostal do\[A]ma.
+        \endverse
+
+        \beginverse
+        Kakor lepe sanje spomin bo na te dni,
+        Ko se spomnim nanje, srce vzdrhti.
+        Saj mladost je naša, kot lepa majska noc,
+        Vsak dan bo lep spomin krasan, vedno lep in vedno vroc.
+        \endverse
+
+        \endsong
+    \end{songs}
+
+
+
 
 \end{document}
