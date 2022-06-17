@@ -21,8 +21,18 @@
         headheight=0
     ]{geometry}
 \usepackage{color}
+\usepackage{fancyhdr}
 
-% \usepackage{layout}
+%\usepackage{layout}
+
+
+% Set header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[LE]{\slshape \rightmark}
+\fancyfoot[RO]{\slshape \leftmark}
+\fancyfoot[LO,RE]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
 
 
 % Številka pesmi
@@ -82,7 +92,7 @@
 % Document
 \begin{document}
 
-    % \layout
+%     \layout
     \begin{songs}{}
         \input{pesmi.tex}
     \end{songs}
