@@ -1,7 +1,7 @@
     # Navodila za pisanje besedil/akordov
 
 
-
+Useful: https://chord-editor.netlify.app/
 
 
 ### Prvo dodaš besedilo:
