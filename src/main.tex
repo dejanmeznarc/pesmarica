@@ -30,10 +30,10 @@
 %\usepackage{lipsum} # lorem ipsum
 
 % Set header and footer
-\pagestyle{fancy}
+\pagestyle{fancy} % also change in kazalo.tex (at end of ile)
 \fancyhf{}
 \fancyfoot[RE]{\slshape \rightmark}
-\fancyfoot[LO]{\slshape \leftmark}
+\fancyfoot[LO]{\slshape}
 \fancyfoot[LE,RO]{\thepage}
 \renewcommand{\headrulewidth}{0pt}
 
@@ -116,7 +116,7 @@
 
     \input{naslovnica.tex}
 
-    \showindex[2]{Kazalo}{titleidx}
+    \input{kazalo.tex}
 
 %     \layout
     \begin{songs}{titleidx,authidx}
