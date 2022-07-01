@@ -10,6 +10,7 @@
 \usepackage[sfdefault]{roboto}
 \usepackage[T1]{fontenc}
 \usepackage[pdftex]{graphicx}
+\usepackage[hidelinks]{hyperref}
 \usepackage[
         a5paper,
         landscape,
@@ -102,6 +103,12 @@
 
 % kazalo in take zadeve
 \newindex{titleidx}{titleidx}
+\setlength{\idxheadwidth}{0}
+\sepindexesfalse
+\renewcommand{\idxrefsfont}{\bfseries}
+
+\renewcommand{\songtarget}[2]{\pdfbookmark[#1]{\songtitle}{#2}}
+\renewcommand{\songlink}[2]{\hyperlink{#1}{#2}}
 
 
 % Document
