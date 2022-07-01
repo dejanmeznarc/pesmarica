@@ -43,7 +43,7 @@ for line in lines:
 
 
 # sort them
-sortedSongInfo =  sorted(songInfo, key=lambda x: x[0], reverse=True)
+sortedSongInfo =  sorted(songInfo, key=lambda x: x[0], reverse=False)
 print(sortedSongInfo)
 
 
