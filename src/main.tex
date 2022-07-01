@@ -100,17 +100,21 @@
 
 }
 
+% kazalo in take zadeve
+\newindex{titleidx}{titleidx}
+
+
 % Document
 \begin{document}
 
     \input{naslovnica.tex}
 
+    \showindex[2]{Kazalo}{titleidx}
+
 %     \layout
-    \begin{songs}{}
-    \input{pesmi2.tex}
-
+    \begin{songs}{titleidx,authidx}
+        \input{pesmi2.tex}
         \input{pesmi.tex}
-
     \end{songs}
 
 
