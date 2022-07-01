@@ -20,11 +20,18 @@ for line in lines:
 
     naslov_pesmi_arr = re.findall(r"\\beginsong\{(.*?)\}", line)
 
+    posebni_naslov = re.findall(r"dejanspecialtitle=\"(.*?)\"", line)
+
 
 
     for naslov_pesmi in naslov_pesmi_arr:
 
-        sinfo = [naslov_pesmi, curlineNum]
+        sinfo = []
+
+        if(len(posebni_naslov) > 0):
+            sinfo = [posebni_naslov[0] + " - (" + naslov_pesmi + ")", curlineNum]
+        else:
+            sinfo = [naslov_pesmi, curlineNum]
 
         songInfo.append(sinfo)
 
