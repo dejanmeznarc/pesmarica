@@ -4,7 +4,7 @@ from datetime import datetime
 
 pesmi = open("../src/pesmi.tex", "rt");
 
-sortiranePesmi = open("../src/pesmi-sorted-"+datetime.now().strftime("%H_%M_%S") + ".tex", "w")
+sortiranePesmi = open("../src/pesmiSortirane" ".tex", "w")
 
 
 lines = pesmi.readlines();
@@ -43,7 +43,7 @@ for line in lines:
 
 
 # sort them
-sortedSongInfo =  sorted(songInfo, key=lambda x: x[0])
+sortedSongInfo =  sorted(songInfo, key=lambda x: x[0], reverse=True)
 print(sortedSongInfo)
 
 
