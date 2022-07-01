@@ -13,11 +13,11 @@
 \usepackage[
         a5paper,
         landscape,
-        left=1cm,
-        right=1cm,
-        top=1cm,
-        bottom=1cm,
-        footskip=5mm,
+        inner=14.5mm,
+        outer=8.5mm,
+        top=7mm,
+        bottom=1.4cm,
+        footskip=7.8mm,
         headheight=0
     ]{geometry}
 \usepackage{color}
@@ -26,6 +26,7 @@
 
 %\usepackage{layout}
 
+\usepackage{lipsum}
 
 % Set header and footer
 \pagestyle{fancy}
@@ -58,7 +59,7 @@
 \renewcommand{\notebgcolor}{white}
 \noversenumbers
 \songcolumns{2}
-\columnsep=1mm
+\columnsep=2.5mm
 \versesep=10pt plus 3pt minus 4pt
 
 \renewcommand{\clineparams}{ % višina akordov
@@ -101,6 +102,8 @@
 
 % Document
 \begin{document}
+
+    \lipsum
 
     \input{naslovnica.tex}
 
