@@ -25,7 +25,7 @@ for line in lines:
 
         sinfo = []
 
-        if (len(posebni_naslov) > 0):
+        if len(posebni_naslov) > 0:
             sinfo = [posebni_naslov[0] + " - (" + naslov_pesmi + ")", curlineNum]
         else:
             sinfo = [naslov_pesmi, curlineNum]
