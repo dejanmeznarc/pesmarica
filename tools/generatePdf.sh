@@ -9,6 +9,8 @@ cd ../src || exit 2
 
 mkdir -p ../out || exit 3
 
+python3 $script_path/sortSongsAlpabeticly.py
+
 echo "[generatePdf.sh] Compiling list of songs"
 pdflatex -file-line-error -interaction=nonstopmode -synctex=1  -output-format=pdf -output-directory=../out main.tex
 
