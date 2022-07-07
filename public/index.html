@@ -47,12 +47,22 @@
 </header>
 
 
+<iframe class="w-full h-full" id="kurac" src="//meznarc.si" frameborder="0"></iframe>
 
-<object data="pesmarica.pdf" type="application/pdf" class="w-full h-full">
-    <div class="flex w-full h-full justify-center items-center">
-        <div>Ni podprto. <a href="pesmarica.pdf" class="text-blue-600 underline">Prenesi PDF</a></div>
-    </div>
-</object>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        let pdf_file = new URL("./pesmarica.pdf", window.location);
+        console.log(pdf_file.href)
+        document.querySelector("#kurac").src = pdf_file.href;
+    }, false);
+</script>
+
+
+<!--<object data="pesmarica.pdf" type="application/pdf" class="w-full h-full">-->
+<!--    <div class="flex w-full h-full justify-center items-center">-->
+<!--        <div>Ni podprto. <a href="pesmarica.pdf" class="text-blue-600 underline">Prenesi PDF</a></div>-->
+<!--    </div>-->
+<!--</object>-->
 
 
 
