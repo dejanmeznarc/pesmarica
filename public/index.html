@@ -4,14 +4,58 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pesmarica RSK</title>
+
+    <title>RSK pesmarica</title>
+
     <link href="css/app.css" rel="stylesheet">
 
+    <meta name="robots" content="noindex">
+
 </head>
-<body>
+<body class="w-full h-full">
 
 
-<div class="bg-red-500">ROTTENTURN</div>
+
+
+<header class="w-full h-14 flex justify-center items-center">
+    <img src="img/logo.png" alt="Logo RSK" class="my-0.75 mx-2 sm:mx-4 h-full">
+
+    <div class="flex-grow xs:hidden"></div>
+
+    <div class="text-lg xs:text-xl xs:divide-x divide-x-gray-300 xs:divide-x-2 flex">
+       <p class="px-1.5 hidden xs:inline"><span class="sm:hidden">RSK</span><span class="hidden sm:flex">Rod Severni kurir</span></p>
+       <p class="px-1.5 xs:px-2">Pesmarica</p>
+    </div>
+
+    <div class="flex-grow"></div>
+
+    <div class="mx-2 sm:mx-4 flex items-center sm:gap-6">
+        <div class="cursor-pointer text-gray-700 duration-150 hover:text-black hidden sm:block">Domov</div>
+        <div class="cursor-pointer text-blue-100 duration-150 hover:text-white bg-blue-600 p-2 rounded-lg
+                    select-none hover:shadow-lg text-sm sm:text-md">
+            Prenesi <span class="hidden md:inline">PDF</span>
+        </div>
+    </div>
+
+
+</header>
+
+<embed src="pesmarica.pdf" class="w-full h-full">
+
+
+<button class="absolute sm:hidden bottom-0 right-0 mr-5 mb-5 rounded-full bg-blue-600 w-16 h-16
+            flex justify-center items-center shadow-lg hover:shadow-xl text-blue-100 duration-100 hover:text-white
+            cursor-pointer select-none text-center text-sm z-100"
+     id="fs-btn"  onclick="dejan('jebote')">
+   Full screen
+</button>
+
+<script>
+    function dejan(jjjj) {
+        document.querySelector("#fs-btn").classList.add("hidden");
+        document.querySelector("header").classList.add("hidden");
+    }
+</script>
 
 
 </body>
