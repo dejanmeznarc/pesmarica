@@ -21,23 +21,28 @@
 
 
 <header class="w-full h-14 flex justify-center items-center">
-    <img src="img/logo.png" alt="Logo RSK" class="my-0.75 mx-2 sm:mx-4 h-full">
+    <img src="img/logo.png" alt="Logo RSK" class="my-0.75 mx-2 sm:mx-4 h-full" onclick="window.location='http://rsktaborniki.si'">
 
     <div class="flex-grow xs:hidden"></div>
 
     <div class="text-lg xs:text-xl xs:divide-x divide-x-gray-300 xs:divide-x-2 flex">
-       <p class="px-1.5 hidden xs:inline"><span class="sm:hidden">RSK</span><span class="hidden sm:flex">Rod Severni kurir</span></p>
-       <p class="px-1.5 xs:px-2">Pesmarica</p>
+       <p class="px-1.5 hidden xs:inline text-blue-600"><span class="sm:hidden">RSK</span><span class="hidden sm:flex">Rod Severni kurir</span></p>
+       <p class="px-1.5 xs:px-2"><span class="hidden md:inline">Spletna</span> Pesmarica</p>
     </div>
 
     <div class="flex-grow"></div>
 
     <div class="mx-2 sm:mx-4 flex items-center sm:gap-6">
-        <div class="cursor-pointer text-gray-700 duration-150 hover:text-black hidden sm:block">Domov</div>
-        <div class="cursor-pointer text-blue-100 duration-150 hover:text-white bg-blue-600 p-2 rounded-lg
-                    select-none hover:shadow-lg text-sm sm:text-md">
-            Prenesi <span class="hidden md:inline">PDF</span>
-        </div>
+        <a href="//rsktaborniki.si">
+            <div class="cursor-pointer text-gray-700 duration-150 hover:text-black hidden sm:block">Domov</div>
+        </a>
+        <a href="pesmarica.pdf">
+            <button class="cursor-pointer text-blue-100 duration-150 hover:text-white bg-blue-600 p-2 rounded-lg
+                        select-none hover:shadow-lg text-sm sm:text-md">
+
+                    Prenesi <span class="hidden md:inline">PDF</span>
+            </button>
+        </a>
     </div>
 
 
